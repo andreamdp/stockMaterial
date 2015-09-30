@@ -6,7 +6,6 @@ from django.db import models
 from django.db.models.fields import PositiveIntegerField
 from django.db.models.fields import PositiveSmallIntegerField
 from django.db.models.fields import DateField
-from parametricas.models import Tipo
 from django.contrib.contenttypes.models import ContentType
 from django.contrib.contenttypes import generic
 

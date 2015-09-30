@@ -6,25 +6,19 @@ TEMPLATE_DEBUG = DEBUG
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'aa',                      # Or path to database file if using sqlite3.
+        # The following settings are not used with sqlite3:
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
+        'PORT': '',                      # Set to empty string for default.
+    }
+}
 MANAGERS = ADMINS
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATABASES = {
-'default': {
-'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-# 'ENGINE': 'django.db.backends.postgresql_psycopg2', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-'NAME': 'solanaABM012', # Or path to database file if using sqlite3.
-# 'NAME': 'ds1voc368igeg', # Or path to database file if using sqlite3.
-'USER': 'root', # Not used with sqlite3.
-'PASSWORD': 'root', # Not used with sqlite3.
-# 'USER': 'lwwqalpdnilwfk', # Not used with sqlite3.
-# 'PASSWORD': 'mEyy-NdwvxgnRR-E3iap3wyfmG', # Not used with sqlite3.
-'HOST': '', # Set to empty string for localhost. Not used with sqlite3.
-'PORT': '', # Set to empty string for default. Not used with sqlite3.
-# 'HOST': 'ec2-54-243-228-241.compute-1.amazonaws.com', # Set to empty string for localhost. Not used with sqlite3.
-# 'PORT': '5432', # Set to empty string for default. Not used with sqlite3.
-}
-}
 
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()

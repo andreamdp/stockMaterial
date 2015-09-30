@@ -1,5 +1,7 @@
-import os, sys
 #encoding= utf-8
+ # -*- coding: utf-8 -*- 
+import os, sys
+
 from django.db import models
 from django.db.models.fields import PositiveIntegerField
 from django.db.models.fields import PositiveSmallIntegerField
